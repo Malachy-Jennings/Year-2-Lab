@@ -1,0 +1,154 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyM8sK3Mnp0mTARTwMpKF9su",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Malachy-Jennings/Year-2-Lab/blob/main/hello%20world%20LOLXD!!!\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 6,
+      "metadata": {
+        "id": "cqMBahbNnNzD"
+      },
+      "outputs": [],
+      "source": [
+        "def Question6(RingMassG, Dr0, Ds0, T1):\n",
+        "  TempF = (Dr0 - Ds0 + Ds0*23*10**-6*T1) / (Ds0*23*10**-6  -  Dr0*17*10**-6)\n",
+        "  RingMassKG = RingMassG * 10**-3\n",
+        "  SphereMass = (386*RingMassKG*TempF) / (900*(T1 - TempF))\n",
+        "  return SphereMass\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(Question6(24, 2.9076, 2.91274, 81))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "7L_Y4BfeqY84",
+        "outputId": "c61fb6cc-d659-46ef-991b-4309009047ac"
+      },
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "0.00259485717377048\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def Question2(TempRise, Distance):\n",
+        "  coeff = 25*10**-6\n",
+        "  return (Distance/2)*(2*coeff*TempRise)**0.5"
+      ],
+      "metadata": {
+        "id": "3RPm6SL4uIW5"
+      },
+      "execution_count": 16,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(Question2(40, 3.1))"
+      ],
+      "metadata": {
+        "id": "7mcQYT8zvM43",
+        "outputId": "5edc967d-d4a8-481a-83af-dbb35780178d",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 18,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "0.06931810730249348\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "WaterG = 170\n",
+        "CoffeeTemp = 78\n",
+        "IceWeight = 12\n",
+        "cool = ((WaterG) * 4186 * CoffeeTemp - (333*10**3) * IceWeight) / ((IceWeight+WaterG)*(4186))\n",
+        "print(cool)"
+      ],
+      "metadata": {
+        "id": "Yb0JMbPB0UoH",
+        "outputId": "88cc99c6-edf5-4ab0-f46f-5f98e1c1aa43",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 27,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "67.61202963305209\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(CoffeeTemp-cool)"
+      ],
+      "metadata": {
+        "id": "H0z96_QP2hMy",
+        "outputId": "3249a36b-8fb6-4b23-89c0-31c86beff2a5",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 28,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "10.387970366947911\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
